@@ -27,11 +27,10 @@ System.register(['angular2/core'], function(exports_1) {
             HeroService = (function () {
                 function HeroService() {
                 }
-                HeroService.prototype.getHeroes = function () {
-                    return heroesPromise;
-                };
-                HeroService.prototype.geHero = function (id) {
-                    return heroesPromise.then(function (heroes) { return heroes.filter(function (h) { return h.id === +id; })[0]; });
+                HeroService.prototype.getHeroes = function () { return heroesPromise; };
+                HeroService.prototype.getHero = function (id) {
+                    return heroesPromise
+                        .then(function (heroes) { return heroes.filter(function (h) { return h.id === +id; })[0]; });
                 };
                 HeroService = __decorate([
                     core_1.Injectable(), 
